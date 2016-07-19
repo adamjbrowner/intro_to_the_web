@@ -12,7 +12,13 @@ get '/tryagain' do
   "anything"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Felix", "Viking", "Joseph"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end

@@ -13,5 +13,6 @@ get '/tryagain' do
 end
 
 get '/cat' do
+  @name = ["Felix", "Viking", "Joseph"].sample
   erb(:index)
 end
